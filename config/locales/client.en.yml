@@ -7,6 +7,7 @@ en:
       accept_policy: "Accept Policy"
       revoke_policy: "Revoke Policy"
       edit_reason: "Policy settings have been modified"
+      last_checked: "last checked and updated on %{date}"
       builder:
         title: Policy
         attach: Create Policy

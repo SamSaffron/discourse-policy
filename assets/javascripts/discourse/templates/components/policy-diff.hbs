@@ -1,0 +1,21 @@
+<div class="policy-diff {{if notCurrentlyAcceptedUser "with-revision"}}">
+  <div class="policy-updater">
+    {{#link-to "user" username class="user"}}
+      {{bound-avatar-template avatarTemplate "small"}}<span>{{username}}</span>
+    {{/link-to}}
+    <span>{{i18n "discourse_policy.last_checked" date=date}}</span>
+  </div>
+
+  {{#if notCurrentlyAcceptedUser}}
+    <div class="latest-revision">
+      {{#if isLoading}}
+        {{loading-spinner size="large"}}
+      {{else}}
+        {{#if diff}}
+          <h3 class="title">Latest revision</h3>
+          {{html-safe diff}}
+        {{/if}}
+      {{/if}}
+    </div>
+  {{/if}}
+</div>
